@@ -3,11 +3,14 @@
   "version": "1.14.0",
   "description": "🏁  serve markdown as html (GitHub style), index directories, live-reload as you edit",
   "preferGlobal": true,
+  "engines": {
+    "node": "8.11.1"
+  },
   "scripts": {
     "test": "xo && npm run cover",
     "cover": "nyc --reporter=lcov --reporter=html --reporter=text ava **/*.test.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
-    "start": "markserv ./README.md"
+    "start": "markserv $MARKDOWN_TO_SERVE"
   },
   "keywords": [
     "markdown",
